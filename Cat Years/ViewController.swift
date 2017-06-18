@@ -10,6 +10,17 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    var resultCatYears = 1
+    @IBOutlet weak var catAge: UILabel!
+    @IBOutlet weak var userInput: UITextField!
+    @IBAction func submitButtonPressed(_ sender: Any) {
+        let userInputValue = Int(userInput.text!)
+        if let checkIfInt = userInputValue{
+            resultCatYears = 7*checkIfInt
+            catAge.text = String(resultCatYears)
+        }
+        
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
